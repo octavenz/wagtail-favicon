@@ -1,0 +1,28 @@
+{% if icon_image %}
+    {% for icon in apple_icons %}
+        <link rel="apple-touch-icon" sizes="{{ icon.size }}" href="{{ root_url }}{{ icon.url }}" />
+    {% endfor %}
+
+    {% for icon in icons %}
+        <link rel="icon" type="image/png" sizes="{{ icon.size }}" href="{{ root_url }}{{ icon.url }}" />
+    {% endfor %}
+
+    {% if ms_image %}
+        <meta name="msapplication-TileImage" content="{{ root_url }}{{ ms_image.url }}" />
+    {% endif %}
+{% endif %}
+
+{% if theme_color %}
+    <meta name="msapplication-TileColor" content="{{ theme_color }}" />
+    <meta name="theme-color" content="{{ theme_color }}" />
+{% endif %}
+
+{% if icon_image %}
+    <link rel="manifest" href="/manifest.json" />
+{% endif %}
+
+
+
+
+
+
