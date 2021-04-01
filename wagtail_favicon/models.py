@@ -55,7 +55,7 @@ class FaviconRenditions:
 
 
 @register_setting
-class WagtailFaviconSettings(BaseSetting, FaviconRenditions):
+class FaviconSettings(BaseSetting, FaviconRenditions):
     base_favicon_image = models.ForeignKey(
         get_image_model_string(),
         null=True,

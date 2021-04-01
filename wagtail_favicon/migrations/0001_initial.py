@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='WagtailFaviconSettings',
+            name='FaviconSettings',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('app_theme_color', models.CharField(blank=True, help_text='Hex colour value', max_length=7, validators=[wagtail_favicon.validators.validate_hex])),
