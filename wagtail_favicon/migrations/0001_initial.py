@@ -12,7 +12,6 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('images', '0001_initial'),
         ('wagtailcore', '0059_apply_collection_ordering'),
     ]
 
