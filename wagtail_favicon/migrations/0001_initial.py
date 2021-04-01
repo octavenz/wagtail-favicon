@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('wagtailcore', '0059_apply_collection_ordering'),
+        ('wagtailcore', '0040_page_draft_title'),
     ]
 
     operations = [
