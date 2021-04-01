@@ -3,6 +3,8 @@
 from django.db import migrations, models
 import django.db.models.deletion
 
+from wagtail.images import get_image_model_string
+
 import wagtail_favicon.models
 import wagtail_favicon.validators
 
@@ -22,9 +24,9 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('app_theme_color', models.CharField(blank=True, help_text='Hex colour value', max_length=7, validators=[wagtail_favicon.validators.validate_hex])),
                 ('app_name', models.CharField(blank=True, help_text='App name for /icon-manifest.json', max_length=128)),
-                ('base_favicon_image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.BaseImage')),
+                ('base_favicon_image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to=get_image_model_string())),
                 ('site', models.OneToOneField(editable=False, on_delete=django.db.models.deletion.CASCADE, to='wagtailcore.Site')),
-                ('social_sharing_image', models.ForeignKey(blank=True, help_text='A default image that wil display when a page is shared on social media', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.BaseImage')),
+                ('social_sharing_image', models.ForeignKey(blank=True, help_text='A default image that wil display when a page is shared on social media', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to=get_image_model_string())),
             ],
             options={
                 'verbose_name': 'Favicon',
