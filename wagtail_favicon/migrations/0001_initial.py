@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             name='WagtailFaviconSettings',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('app_theme_color', models.CharField(blank=True, help_text='Hex colour value', max_length=7, validators=[favicon.validators.validate_hex])),
+                ('app_theme_color', models.CharField(blank=True, help_text='Hex colour value', max_length=7, validators=[wagtail_favicon.validators.validate_hex])),
                 ('app_name', models.CharField(blank=True, help_text='App name for /icon-manifest.json', max_length=128)),
                 ('base_favicon_image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.BaseImage')),
                 ('site', models.OneToOneField(editable=False, on_delete=django.db.models.deletion.CASCADE, to='wagtailcore.Site')),
