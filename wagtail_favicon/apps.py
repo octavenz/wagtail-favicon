@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class FaviconConfig(AppConfig):
-    name = 'favicon'
+class WagtailFaviconConfig(AppConfig):
+    name = 'wagtail_favicon'

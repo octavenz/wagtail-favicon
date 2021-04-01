@@ -2,8 +2,9 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import favicon.models
-import favicon.validators
+
+import wagtail_favicon.models
+import wagtail_favicon.validators
 
 
 class Migration(migrations.Migration):
@@ -17,7 +18,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='FaviconSettings',
+            name='WagtailFaviconSettings',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('app_theme_color', models.CharField(blank=True, help_text='Hex colour value', max_length=7, validators=[favicon.validators.validate_hex])),
@@ -27,8 +28,8 @@ class Migration(migrations.Migration):
                 ('social_sharing_image', models.ForeignKey(blank=True, help_text='A default image that wil display when a page is shared on social media', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.BaseImage')),
             ],
             options={
-                'verbose_name': 'Favicon Settings',
+                'verbose_name': 'Favicon',
             },
-            bases=(models.Model, favicon.models.FaviconRenditions),
+            bases=(models.Model, wagtail_favicon.models.FaviconRenditions),
         ),
     ]

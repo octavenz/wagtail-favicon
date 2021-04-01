@@ -6,7 +6,7 @@ from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.images import get_image_model_string
 from wagtail.images.edit_handlers import ImageChooserPanel
 
-from favicon.validators import validate_hex
+from .validators import validate_hex
 
 
 class FaviconRenditions:

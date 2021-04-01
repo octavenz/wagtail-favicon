@@ -1,1 +1,1 @@
-default_app_config = 'favicon.apps.FaviconConfig'
+default_app_config = 'wagtail_favicon.apps.WagtailFaviconConfig'

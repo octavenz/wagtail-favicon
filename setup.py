@@ -22,7 +22,7 @@ setup(
     author="Pat Horsley (Octave)",
     author_email="pat@octave.nz",
     url="https://github.com/octavenz/wagtail-favicon",
-    packages=find_packages(exclude=("build_test",)),
+    packages=find_packages(),
     include_package_data=True,
     license="BSD",
     classifiers=[
