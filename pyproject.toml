@@ -1,8 +1,10 @@
 [tool.poetry]
 name = "wagtail-favicon"
-version = "0.1.5"
+version = "0.1.6"
 description = "Easily add shortcut icons to any wagtail site."
 authors = ["Pat Horsley <pat@octave.nz>"]
+readme = 'README.md'
+homepage = 'https://github.com/octavenz/wagtail-favicon'
 license = "BSD"
 
 [tool.poetry.dependencies]
