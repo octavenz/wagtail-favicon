@@ -73,7 +73,7 @@ Configure settings
 For best results use a transparent png at 1024 x 1024.  
 Ideally pre optimised with a tool like [tinypng.com](https://tinypng.com).
 
-[Screenshot](https://github.com/octavenz/wagtail-favicon/blob/master/screenshot.jpg)
+![Screenshot](https://github.com/octavenz/wagtail-favicon/blob/master/screenshot.jpg)
 
 ##### Publishing
 wagtail-favicon is hosted on pypi under @octavenz account.
