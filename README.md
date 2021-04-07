@@ -9,32 +9,25 @@ Easily add shortcut icons to any wagtail site. Upload a .png image from a wagtai
 #### Install with pip
 
 ```
-
 pip install wagtail-favicon
 
 or
 
 poetry add wagtail-favicon
-
-
 ```
 
 #### Add to Django installed apps
 
 ```
-
 INSTALLED_APPS = [
     #...
     'wagtail_favicon',
 ]
-
-
 ```
 
 #### Add routes to app.urls
 
 ```
-
 from wagtail_favicon.urls import urls as favicon_urls
 
 urlpatterns += [
@@ -44,8 +37,6 @@ urlpatterns += [
 
     url(r'', include(favicon_urls)),  # <------ add urls to existing urls
 ]
-
-
 ```
 
 Once you've completed setup you will now be able to access the folloing urls:
@@ -76,15 +67,12 @@ Ideally pre optimised with a tool like [tinypng.com](https://tinypng.com).
 ![Screenshot](https://github.com/octavenz/wagtail-favicon/blob/master/screenshot.jpg)
 
 ##### Publishing
-wagtail-favicon is hosted on pypi under @octavenz account.
-Poetry is used to build and deploy.
-Octave Devs - password is in password manager.
+wagtail-favicon is hosted on pypi under @octavenz account.  
+Poetry is used to build and deploy.  
+Octave Devs - password is in password manager.  
 
 ```
-
 > poetry build
 
 > poetry publish
-
-
 ```
