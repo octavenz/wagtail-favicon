@@ -66,13 +66,3 @@ Ideally pre optimised with a tool like [tinypng.com](https://tinypng.com).
 
 ![Screenshot](https://github.com/octavenz/wagtail-favicon/blob/master/screenshot.jpg)
 
-##### Publishing
-wagtail-favicon is hosted on pypi under @octavenz account.  
-Poetry is used to build and deploy.  
-Octave Devs - password is in password manager.  
-
-```
-> poetry build
-
-> poetry publish
-```
