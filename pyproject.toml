@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "wagtail-favicon"
+version = "0.1.5"
+description = "Easily add shortcut icons to any wagtail site."
+authors = ["Pat Horsley <pat@octave.nz>"]
+license = "BSD"
+
+[tool.poetry.dependencies]
+python = "^3"
+Django = "^2.2"
+wagtail = "^2.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
