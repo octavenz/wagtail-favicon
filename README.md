@@ -21,6 +21,7 @@ poetry add wagtail-favicon
 ```
 INSTALLED_APPS = [
     #...
+    'wagtail.contrib.settings'  # <-- ensure you have wagtail settings loaded 
     'wagtail_favicon',
 ]
 ```
@@ -37,6 +38,8 @@ urlpatterns += [
 
     url(r'', include(favicon_urls)),  # <------ add urls to existing urls
 ]
+
+# note: newer versions of django may use `path` instead of `url`
 ```
 
 Once you've completed setup you will now be able to access the folloing urls:

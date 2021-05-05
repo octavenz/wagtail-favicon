@@ -74,16 +74,7 @@ class FaviconSettings(BaseSetting, FaviconRenditions):
     app_name = models.CharField(
         max_length=128,
         blank=True,
-        help_text='App name for /icon-manifest.json'
-    )
-
-    social_sharing_image = models.ForeignKey(
-        get_image_model_string(),
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='+',
-        help_text='A default image that wil display when a page is shared on social media'
+        help_text='App name for manifest.json'
     )
 
     panels = [
@@ -96,7 +87,6 @@ class FaviconSettings(BaseSetting, FaviconRenditions):
             heading="Favicon Settings",
             classname="collapsible"
         ),
-        ImageChooserPanel('social_sharing_image'),
     ]
 
     class Meta:
