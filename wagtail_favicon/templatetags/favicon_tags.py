@@ -19,5 +19,4 @@ def favicon_meta(context):
         'apple_icons': favicon_settings.apple_icons,
         'icons': favicon_settings.icons,
         'ms_image': ms_image,
-        'root_url': site.root_url,
     }

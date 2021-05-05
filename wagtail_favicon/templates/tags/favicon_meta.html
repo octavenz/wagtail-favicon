@@ -1,14 +1,14 @@
 {% if icon_image %}
     {% for icon in apple_icons %}
-        <link rel="apple-touch-icon" sizes="{{ icon.size }}" href="{{ root_url }}{{ icon.url }}" />
+        <link rel="apple-touch-icon" sizes="{{ icon.size }}" href="{{ icon.url }}" />
     {% endfor %}
 
     {% for icon in icons %}
-        <link rel="icon" type="image/png" sizes="{{ icon.size }}" href="{{ root_url }}{{ icon.url }}" />
+        <link rel="icon" type="image/png" sizes="{{ icon.size }}" href="{{ icon.url }}" />
     {% endfor %}
 
     {% if ms_image %}
-        <meta name="msapplication-TileImage" content="{{ root_url }}{{ ms_image.url }}" />
+        <meta name="msapplication-TileImage" content="{{ ms_image.url }}" />
     {% endif %}
 {% endif %}
 
