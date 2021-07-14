@@ -8,9 +8,6 @@ homepage = 'https://github.com/octavenz/wagtail-favicon'
 license = "BSD"
 
 [tool.poetry.dependencies]
-python = "^3"
-Django = "^2.2 || ^3"
-wagtail = "^2.8"
 
 [tool.poetry.dev-dependencies]
 
