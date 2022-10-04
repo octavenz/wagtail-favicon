@@ -2,6 +2,7 @@ from django import template
 from wagtail.core.models import Site
 
 from wagtail_favicon.models import FaviconSettings
+from .utils import get_rendition_url
 
 register = template.Library()
 
@@ -11,7 +12,7 @@ def favicon_meta(context):
     site = Site.find_for_request(context.get('request'))
     favicon_settings = FaviconSettings.for_site(site)
     icon_image = favicon_settings.base_favicon_image
-    ms_image = icon_image.get_rendition('fill-144x144') if icon_image else None
+    ms_image = get_rendition_url(icon_image, 'fill-144x144') if icon_image else None
 
     return {
         'icon_image': icon_image,
