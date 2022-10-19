@@ -1,6 +1,6 @@
 from django.template.response import TemplateResponse
 from django.http import JsonResponse, Http404
-from wagtail.core.models import Site
+from wagtail.models import Site
 
 from .models import FaviconSettings
 
