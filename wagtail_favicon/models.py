@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.functional import cached_property
 
 from wagtail.admin.panels import MultiFieldPanel, FieldPanel
-from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 from wagtail.images import get_image_model_string
 
 from .validators import validate_hex
@@ -54,7 +54,7 @@ class FaviconRenditions:
 
 
 @register_setting
-class FaviconSettings(BaseSetting, FaviconRenditions):
+class FaviconSettings(BaseSiteSetting, FaviconRenditions):
     base_favicon_image = models.ForeignKey(
         get_image_model_string(),
         null=True,
