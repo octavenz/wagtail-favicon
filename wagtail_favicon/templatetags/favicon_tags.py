@@ -2,7 +2,7 @@ from django import template
 from wagtail.core.models import Site
 
 from wagtail_favicon.models import FaviconSettings
-from .utils import get_rendition_url
+from wagtail_favicon.utils import get_rendition_url
 
 register = template.Library()
 
