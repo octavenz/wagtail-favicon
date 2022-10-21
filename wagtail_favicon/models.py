@@ -37,7 +37,7 @@ class FaviconRenditions:
         return [
             {
                 'size': size,
-                'url': get_rendition_url(self.base_base_favicon_image, f'fill-{size}')
+                'url': get_rendition_url(self.base_favicon_image, f'fill-{size}')
             } for size in sizes
         ]
 
