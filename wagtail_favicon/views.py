@@ -62,7 +62,7 @@ def icon_manifest(request):
                 "type": "image/png",
                 "density": "3.0"
             }, {
-                "src": get_rendition_url('fill-192x192'),
+                "src": get_rendition_url(image, 'fill-192x192'),
                 "sizes": "192x192",
                 "type": "image/png",
                 "density": "4.0"
