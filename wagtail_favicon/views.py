@@ -1,5 +1,6 @@
 from django.template.response import TemplateResponse
 from django.http import JsonResponse, Http404
+from django.views.generic import RedirectView
 from wagtail.core.models import Site
 
 from .models import FaviconSettings
@@ -77,3 +78,9 @@ def icon_manifest(request):
 
     return JsonResponse(content)
 
+
+class FaviconView(RedirectView):
+    def get_redirect_view(self):
+        settings = FaviconSettings.for_request(self.request)
+
+        return settings.icons[0]["url"]
