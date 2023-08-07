@@ -1,7 +1,9 @@
 from django import template
-from wagtail.core.models import Site
+
+from wagtail.models import Site
 
 from wagtail_favicon.models import FaviconSettings
+
 
 register = template.Library()
 
