@@ -90,5 +90,3 @@ class FaviconSettings(BaseSiteSetting, FaviconRenditions):
 
     class Meta:
         verbose_name = 'Favicon'
-
-
