@@ -8,7 +8,7 @@
     {% endfor %}
 
     {% if ms_image %}
-        <meta name="msapplication-TileImage" content="{{ ms_image.url }}" />
+        <meta name="msapplication-TileImage" content="{{ ms_image }}" />
     {% endif %}
 {% endif %}
 
@@ -20,4 +20,3 @@
 {% if icon_image %}
     <link rel="manifest" href="/manifest.json" />
 {% endif %}
-

@@ -6,6 +6,7 @@ from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 from wagtail.images import get_image_model_string
 
 from .validators import validate_hex
+from .utils import get_rendition_url
 
 
 class FaviconRenditions:
@@ -28,11 +29,6 @@ class FaviconRenditions:
         '57x57',
     ]
 
-    def get_rendition(self, size):
-        image = self.base_favicon_image
-        rendition = image.get_rendition(f'fill-{size}')
-        return rendition.url
-
     def make_renditions(self, sizes):
         if self.base_favicon_image is None:
             return []
@@ -40,7 +36,7 @@ class FaviconRenditions:
         return [
             {
                 'size': size,
-                'url': self.get_rendition(size)
+                'url': get_rendition_url(self.base_favicon_image, f'fill-{size}')
             } for size in sizes
         ]
 
@@ -90,5 +86,3 @@ class FaviconSettings(BaseSiteSetting, FaviconRenditions):
 
     class Meta:
         verbose_name = 'Favicon'
-
-
