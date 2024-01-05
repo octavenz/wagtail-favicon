@@ -1,10 +1,9 @@
 from django.db import models
 from django.utils.functional import cached_property
 
-from wagtail.admin.edit_handlers import MultiFieldPanel, FieldPanel
-from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.admin.panels import MultiFieldPanel, FieldPanel
+from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 from wagtail.images import get_image_model_string
-from wagtail.images.edit_handlers import ImageChooserPanel
 
 from .validators import validate_hex
 from .utils import get_rendition_url
@@ -51,7 +50,7 @@ class FaviconRenditions:
 
 
 @register_setting
-class FaviconSettings(BaseSetting, FaviconRenditions):
+class FaviconSettings(BaseSiteSetting, FaviconRenditions):
     base_favicon_image = models.ForeignKey(
         get_image_model_string(),
         null=True,
@@ -78,7 +77,7 @@ class FaviconSettings(BaseSetting, FaviconRenditions):
             [
                 FieldPanel('app_name'),
                 FieldPanel('app_theme_color'),
-                ImageChooserPanel('base_favicon_image'),
+                FieldPanel('base_favicon_image'),
             ],
             heading="Favicon Settings",
             classname="collapsible"

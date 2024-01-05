@@ -2,6 +2,8 @@
 
 Easily add shortcut icons to any wagtail site. Upload a .png image from a wagtail settings page and wagtail-favicon will resize it and add provide markup to your pages via a template tag.
 
+Version 0.3.0 is for Wagtail versions 3+.
+
 ---
 
 ### Installation & Setup
@@ -32,14 +34,12 @@ INSTALLED_APPS = [
 from wagtail_favicon.urls import urls as favicon_urls
 
 urlpatterns += [
-    url(r'^documents/', include(wagtaildocs_urls)),
-    url(r'^search/$', search, name='search'),
-    url(r'', include(wagtail_urls)),
+    path('documents/', include(wagtaildocs_urls)),
+    path('search/', search, name='search'),
+    path('', include(wagtail_urls)),
 
-    url(r'', include(favicon_urls)),  # <------ add urls to existing urls
+    path('', include(favicon_urls)),  # <------ add urls to existing urls
 ]
-
-# note: newer versions of django may use `path` instead of `url`
 ```
 
 Once you've completed setup you will now be able to access the folloing urls:

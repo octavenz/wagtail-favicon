@@ -1,6 +1,7 @@
-from django.template.response import TemplateResponse
 from django.http import JsonResponse, Http404
-from wagtail.core.models import Site
+from django.template.response import TemplateResponse
+
+from wagtail.models import Site
 
 from .models import FaviconSettings
 from .utils import get_rendition_url
